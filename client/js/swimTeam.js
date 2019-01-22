@@ -4,6 +4,7 @@ const SwimTeam = {
   direction: 'left',
   coords: { top: 100, left: 100 },
   max: { top: 0, left: 0, bottom: 295, right: 240 },
+  directions: ['left', 'right', 'down', 'up'],
 
   move: (direction) => {
     if (!direction) { return; }
@@ -52,7 +53,12 @@ const SwimTeam = {
         SwimTeam.coords.left += 5;
       }
       break;
-    } 
+    }
   }
+
+  // serverMove: () => {
+  //   var index = Math.floor((Math.random() * 4));
+  //   SwimTeam.move(SwimTeam.directions[index]);
+  // }
 
 };
